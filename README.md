@@ -18,6 +18,9 @@ step 2: go to newly created project file(package.json should be visible)
 step 3: npm run build /npm run start 
 
 # React structure
+# React Project Structure
+
+```text
 my-app/
 │
 ├── node_modules/      # Installed packages/dependencies
@@ -37,4 +40,34 @@ my-app/
 ├── .gitignore         # Files/folders ignored by Git
 ├── package.json       # Project metadata & dependencies
 ├── package-lock.json  # Exact dependency versions
-└── README.md          # Project documentation 
+└── README.md          # Project documentation
+```
+
+## Folder Description
+
+| Folder/File     | Description                                               |
+| --------------- | --------------------------------------------------------- |
+| `src/`          | Contains all React application code.                      |
+| `public/`       | Stores static files that are served directly.             |
+| `assets/`       | Images, fonts, icons, and other resources.                |
+| `components/`   | Reusable UI components such as Navbar, Button, Card, etc. |
+| `pages/`        | Components representing entire pages/screens.             |
+| `App.js`        | Root component of the application.                        |
+| `index.js`      | Entry point that renders the React app.                   |
+| `package.json`  | Contains project dependencies and scripts.                |
+| `node_modules/` | Installed npm packages.                                   |
+| `.gitignore`    | Specifies files and folders Git should ignore.            |
+
+## Application Flow
+
+```text
+index.html
+    ↓
+index.js
+    ↓
+App.js
+    ↓
+Components
+    ↓
+Browser UI
+```
