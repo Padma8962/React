@@ -11,7 +11,25 @@ function App() {
     // console.log(`successfully incresed counter value to ${counter}`) //console m toh increse ho rhi hai counter ki value pr html m nhi ho rhi hai
     // this thing is resolved using hooks(UI updation ko react control krta hai)
 
-    setCounter(counter+1)
+    // setCounter(counter+1)
+
+    // what if i have more the one setCounter method?
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // what will be the ans 15,16,17 or 19
+    // output : ek click pr ek hi value bad rahi hai kyumki useState ui m updates batch m bhejta hai toh agr same kam baar baar update hora hota hia toh vo same batch m jaata hai ui m
+
+    // agr humko 18 hi output chaiye ek hi click m toh kese karenge?
+    setCounter(preCounter=> //preCounter is the last updated state 
+            preCounter + 1 
+    )
+    setCounter(preCounter=> //preCounter is the last updated state 
+            preCounter + 1 
+    )
+    setCounter(preCounter=> //preCounter is the last updated state 
+            preCounter + 1 
+    )
   }
   const removeValue = () =>{
     setCounter(counter-1)
